@@ -256,3 +256,5 @@ def test_closure_averager():
     got = run(closure_averager_src)
     assert got == 12.0
 # end::RUN_AVERAGER[]
+
+test_factorial()
