@@ -120,3 +120,8 @@ class DictLikeMappingSub(SimpleMappingSub):
 
     def __contains__(self, key):
         return key in self._data
+
+
+if __name__ == '__main__':
+    import doctest
+    doctest.testmod(verbose=True)
