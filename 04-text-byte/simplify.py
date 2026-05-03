@@ -88,3 +88,8 @@ def asciize(txt):
     no_marks = no_marks.replace('ß', 'ss')          # <6>
     return unicodedata.normalize('NFKC', no_marks)  # <7>
 # end::ASCIIZE[]
+
+
+if __name__ == '__main__':
+    import doctest
+    doctest.testmod(verbose=True)
