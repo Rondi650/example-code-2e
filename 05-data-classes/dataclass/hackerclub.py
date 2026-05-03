@@ -39,6 +39,7 @@ class HackerClubMember(ClubMember):                         # <1>
 
     def __post_init__(self):
         cls = self.__class__                                # <4>
+        print(cls)
         if self.handle == '':                               # <5>
             self.handle = self.name.split()[0]
         if self.handle in cls.all_handles:                  # <6>
@@ -46,3 +47,10 @@ class HackerClubMember(ClubMember):                         # <1>
             raise ValueError(msg)
         cls.all_handles.add(self.handle)                    # <7>
 # end::HACKERCLUB[]
+
+if __name__ == '__main__':
+    import doctest
+    doctest.testmod()
+    
+leo = HackerClubMember('Rondi Nunes')
+print(leo)

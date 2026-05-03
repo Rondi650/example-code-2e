@@ -15,3 +15,21 @@ class FrenchDeck:
 
     def __getitem__(self, position):
         return self._cards[position]
+
+
+
+Card.suit_values = dict(spades=3, hearts=2,
+                        diamonds=1, clubs=0)                
+def spades_high(card):                                      
+    rank_value = FrenchDeck.ranks.index(card.rank)                
+    suit_value = card.suit_values[card.suit]
+    return rank_value * len(card.suit_values) + suit_value
+
+Card.overall_rank = spades_high                             
+lowest_card = Card('2', 'clubs')
+highest_card = Card('A', 'spades')
+print(Card.__dict__)                                  
+
+print(highest_card)
+
+print(FrenchDeck.__annotations__)

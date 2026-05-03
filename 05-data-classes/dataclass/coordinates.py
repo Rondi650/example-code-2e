@@ -21,3 +21,7 @@ class Coordinate:
         we = 'E' if self.lon >= 0 else 'W'
         return f'{abs(self.lat):.1f}°{ns}, {abs(self.lon):.1f}°{we}'
 # end::COORDINATE[]
+
+moscow = Coordinate(55.756, 37.617)
+print(moscow)
+ 

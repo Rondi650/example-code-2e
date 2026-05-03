@@ -1,8 +1,8 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 
 # tag::CLUBMEMBER[]
 @dataclass
 class ClubMember:
-    name: str
-    guests: list = []
+    name: str = 'a'
+    guests: list = field(default_factory=list)
 # end::CLUBMEMBER[]
