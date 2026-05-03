@@ -19,3 +19,4 @@ print('Words')
 print('  str  :', re_words_str.findall(text_str))        # <8>
 print('  bytes:', re_words_bytes.findall(text_bytes))    # <9>
 # end::RE_DEMO[]
+

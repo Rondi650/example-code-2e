@@ -6,6 +6,9 @@ START, END = ord(' '), sys.maxunicode + 1           # <1>
 
 def find(*query_words, start=START, end=END):       # <2>
     query = {w.upper() for w in query_words}        # <3>
+    print(query)
+    print(start)
+    print(end)
     for code in range(start, end):
         char = chr(code)                            # <4>
         name = unicodedata.name(char, None)         # <5>
