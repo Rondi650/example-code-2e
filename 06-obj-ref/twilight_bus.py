@@ -15,7 +15,7 @@ class TwilightBus:
         if passengers is None:
             self.passengers = []  # <1>
         else:
-            self.passengers = passengers  #<2>
+            self.passengers = list(passengers)  #<2>
 
     def pick(self, name):
         self.passengers.append(name)
@@ -24,3 +24,7 @@ class TwilightBus:
         self.passengers.remove(name)  # <3>
 # end::TWILIGHT_BUS_CLASS[]
 
+import doctest
+
+if __name__ == '__main__':
+    doctest.testmod(verbose=True)

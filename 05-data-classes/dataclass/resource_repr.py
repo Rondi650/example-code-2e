@@ -44,6 +44,7 @@ from dataclasses import dataclass, field, fields
 from typing import Optional, TypedDict
 from enum import Enum, auto
 from datetime import date
+from rich import print
 
 
 class ResourceType(Enum):
@@ -67,7 +68,10 @@ class Resource:
 # tag::REPR[]
     def __repr__(self):
         cls = self.__class__
+        print(cls)
+        print(fields(cls))
         cls_name = cls.__name__
+        print(cls_name)
         indent = ' ' * 4
         res = [f'{cls_name}(']                            # <1>
         for f in fields(cls):                             # <2>
