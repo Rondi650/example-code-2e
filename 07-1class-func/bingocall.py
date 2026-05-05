@@ -17,9 +17,11 @@ True
 
 import random
 
+
 class BingoCage:
 
     def __init__(self, items):
+        print(f'items: {items}')
         self._items = list(items)  # <1>
         random.shuffle(self._items)  # <2>
 
@@ -33,3 +35,19 @@ class BingoCage:
         return self.pick()
 
 # end::BINGO[]
+
+
+def factorial(n):
+    """returns n!"""
+    return 1 if n < 2 else n * factorial(n - 1)
+
+
+print(map(factorial, range(11)))
+print(list(map(factorial, range(11))))
+
+bingo = BingoCage(range(3))
+print(bingo)
+print(bingo.pick())
+print(bingo())
+
+print(list(range(3)))
