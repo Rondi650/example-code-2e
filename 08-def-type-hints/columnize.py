@@ -27,3 +27,6 @@ def demo() -> None:
 
 if __name__ == '__main__':
     demo()
+
+# for row in table:
+#     print(''.join(f'{word:10}' for word in row))

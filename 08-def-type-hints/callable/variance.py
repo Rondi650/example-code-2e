@@ -20,3 +20,4 @@ def display_ok(temperature: complex) -> None:  # <7>
     print(temperature)
 
 update(probe_ok, display_ok)  # OK  # <8>
+
