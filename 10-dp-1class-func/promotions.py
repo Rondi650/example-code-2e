@@ -21,5 +21,5 @@ def large_order_promo(order: Order) -> Decimal:
     """7% discount for orders with 10 or more distinct items"""
     distinct_items = {item.product for item in order.cart}
     if len(distinct_items) >= 10:
-        return order.total() * Decimal('0.07')
+        return order.total() * Decimal('0.07' )
     return Decimal(0)

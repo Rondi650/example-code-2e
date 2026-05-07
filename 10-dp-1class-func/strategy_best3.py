@@ -47,7 +47,9 @@ from strategy import Order
 import promotions
 
 
-promos = [func for _, func in inspect.getmembers(promotions, inspect.isfunction)]
+promos = [func for _, func in inspect.getmembers(
+    promotions, inspect.isfunction)]
+print(promos)
 
 
 def best_promo(order: Order) -> Decimal:

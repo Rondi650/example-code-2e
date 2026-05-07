@@ -25,4 +25,5 @@ def f2():
 def f3():
     print('running f3()')
 
+print(registry)
 # end::REGISTRATION_PARAM[]

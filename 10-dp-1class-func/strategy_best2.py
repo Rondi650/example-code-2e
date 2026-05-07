@@ -48,7 +48,7 @@ promos = [promo for name, promo in globals().items()  # <2>
                 if name.endswith('_promo') and        # <3>
                    name != 'best_promo'               # <4>
 ]
-
+print(promos)
 
 def best_promo(order: Order) -> Decimal:              # <5>
     """Compute the best discount available"""
