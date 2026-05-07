@@ -74,3 +74,35 @@ def _(x) -> str:
 
 # end::HTMLIZE[]
 
+
+def soma():
+    def somando(a, b):
+        return a + b
+    return somando
+
+teste = soma()  # chama soma() para obter o closure
+teste(5,5)
+
+objeto = teste.__code__
+
+for attr in dir(objeto):
+    valor = getattr(objeto, attr)
+    print(f"{attr}: {valor}")
+    
+    
+'''GET ATTR'''
+class Carro:
+    marca = "Fiat"
+    ano   = 2020
+
+c = Carro()
+
+# acesso estático — nome fixo no código
+print(c.marca)
+
+# acesso dinâmico — nome vem de uma variável
+campo = "marca"
+print(getattr(c, campo))        # "Fiat"
+
+campo = "ano"
+print(getattr(c, campo))        # 2020

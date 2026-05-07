@@ -14,3 +14,6 @@ if __name__ == '__main__':
     snooze(.123)
     print('*' * 40, 'Calling factorial(6)')
     print('6! =', factorial(6))
+
+import clockdeco_demo
+print(clockdeco_demo.factorial.__name__)
