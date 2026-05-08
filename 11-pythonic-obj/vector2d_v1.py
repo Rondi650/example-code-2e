@@ -1,34 +1,34 @@
 """
 A 2-dimensional vector class
 
-    >>> v1 = Vector2d(3, 4)
-    >>> print(v1.x, v1.y)
+    v1 = Vector2d(3, 4)
+    print(v1.x, v1.y)
     3.0 4.0
-    >>> x, y = v1
-    >>> x, y
+    x, y = v1
+    x, y
     (3.0, 4.0)
-    >>> v1
+    v1
     Vector2d(3.0, 4.0)
-    >>> v1_clone = eval(repr(v1))
-    >>> v1 == v1_clone
+    v1_clone = eval(repr(v1))
+    v1 == v1_clone
     True
-    >>> print(v1)
+    print(v1)
     (3.0, 4.0)
-    >>> octets = bytes(v1)
-    >>> octets
+    octets = bytes(v1)
+    octets
     b'd\\x00\\x00\\x00\\x00\\x00\\x00\\x08@\\x00\\x00\\x00\\x00\\x00\\x00\\x10@'
-    >>> abs(v1)
+    abs(v1)
     5.0
-    >>> bool(v1), bool(Vector2d(0, 0))
+    bool(v1), bool(Vector2d(0, 0))
     (True, False)
 
 
 Test of ``.frombytes()`` class method:
 
-    >>> v1_clone = Vector2d.frombytes(bytes(v1))
-    >>> v1_clone
+    v1_clone = Vector2d.frombytes(bytes(v1))
+    v1_clone
     Vector2d(3.0, 4.0)
-    >>> v1 == v1_clone
+    v1 == v1_clone
     True
 
 """
@@ -74,3 +74,12 @@ class Vector2d:
         memv = memoryview(octets[1:]).cast(typecode)  # <4>
         return cls(*memv)  # <5>
 # end::VECTOR2D_V1[]
+
+
+class Demo:
+    @classmethod
+    def klassmeth(*args):
+        return args  
+    @staticmethod
+    def statmeth(*args):
+        return args  
