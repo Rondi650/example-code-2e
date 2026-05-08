@@ -217,3 +217,7 @@ class Vector:
         typecode = chr(octets[0])
         memv = memoryview(octets[1:]).cast(typecode)
         return cls(memv)
+    
+    
+import functools
+functools.reduce(lambda a,b: a*b, range(1, 6))

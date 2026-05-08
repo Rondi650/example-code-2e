@@ -284,3 +284,14 @@ class Vector:
         memv = memoryview(octets[1:]).cast(typecode)
         return cls(memv)
 # end::VECTOR_V5[]
+
+
+if __name__ == '__main__':
+    import doctest
+    doctest.testmod(verbose=True)
+    
+from functools import reduce
+my_list = [[1, 2, 3], [30, 50, 70], [9, 8, 7]]
+print(reduce(lambda a, b: a + b[1], 
+             my_list, 
+             0))
