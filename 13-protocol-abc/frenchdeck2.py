@@ -1,4 +1,5 @@
 from collections import namedtuple, abc
+from typing import MutableSequence, Sequence
 
 Card = namedtuple('Card', ['rank', 'suit'])
 
@@ -24,3 +25,12 @@ class FrenchDeck2(abc.MutableSequence):
 
     def insert(self, position, value):  # <3>
         self._cards.insert(position, value)
+
+teste = FrenchDeck2()
+print(teste[5])
+print(isinstance(teste, MutableSequence))
+
+nome = 'rondi'
+print(nome[2])
+print(isinstance(nome, MutableSequence))
+print(isinstance(nome, Sequence))
