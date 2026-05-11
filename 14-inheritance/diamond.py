@@ -24,6 +24,8 @@ diamond1.py: Demo of diamond-shaped class graph.
 """
 
 # tag::DIAMOND_CLASSES[]
+
+
 class Root:  # <1>
     def ping(self):
         print(f'{self}.ping() in Root')
@@ -60,3 +62,11 @@ class Leaf(A, B):  # <4>
         print(f'{self}.ping() in Leaf')
         super().ping()
 # end::DIAMOND_CLASSES[]
+
+
+leaf1 = Leaf()
+leaf1.ping()
+print()
+leaf1.pong()
+
+# print(Leaf.__mro__)

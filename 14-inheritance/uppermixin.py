@@ -110,6 +110,8 @@ Tests for count retrieval using `d[key]` notation::
 """
 # tag::UPPERCASE_MIXIN[]
 import collections
+import os
+os.system('clear')
 
 def _upper(key):  # <1>
     try:
@@ -138,3 +140,16 @@ class UpperDict(UpperCaseMixin, collections.UserDict):  # <1>
 class UpperCounter(UpperCaseMixin, collections.Counter):  # <2>
     """Specialized 'Counter' that uppercases string keys"""  # <3>
 # end::UPPERDICT[]
+
+
+d = UpperDict([('a', 'letter A'), (2, 'digit two')])
+print(d)
+d['b'] = 'letter B'
+print(d)
+print(d['a'], d.get('B'))
+print(list(d.keys()))
+
+c = UpperCounter('BaNanA')
+print(c.most_common())
+
+from collections import UserDict
