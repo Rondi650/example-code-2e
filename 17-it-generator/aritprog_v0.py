@@ -23,3 +23,18 @@ class ArithmeticProgression:
         while forever or result < self.end:
             yield result
             result += self.step
+
+
+def aritprog_gen(begin, step, end=None):
+    result = type(begin + step)(begin)
+    print(type(begin))
+    print(type(result))
+    forever = end is None
+    index = 0
+    while forever or result < end:
+        yield result
+        index += 1
+        result = begin + step * index
+        
+ap = aritprog_gen(1,1.5,10)
+print(list(ap))

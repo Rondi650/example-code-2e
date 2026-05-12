@@ -35,3 +35,9 @@ class Sentence:
         return 'Sentence(%s)' % reprlib.repr(self.text)  # <4>
 
 # end::SENTENCE_SEQ[]
+
+
+class Spam:
+    def __getitem__(self, i):
+        print('->', i)
+        raise IndexError()

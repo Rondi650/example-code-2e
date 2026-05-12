@@ -358,3 +358,5 @@ class Vector:
     def __radd__(self, other):
         return self + other
 # end::VECTOR_V6_ADD[]
+
+from collections import Counter

@@ -429,3 +429,5 @@ class Vector:
 
     def __rmatmul__(self, other):
         return self @ other
+
+import numpy as np

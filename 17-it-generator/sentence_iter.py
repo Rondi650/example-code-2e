@@ -34,6 +34,9 @@ class SentenceIterator:
     def __next__(self):
         try:
             word = self.words[self.index]  # <5>
+            print(self.words)
+            print(self.index)
+
         except IndexError:
             raise StopIteration()  # <6>
         self.index += 1  # <7>
