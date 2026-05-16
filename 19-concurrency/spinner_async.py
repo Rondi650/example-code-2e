@@ -7,6 +7,7 @@
 # tag::SPINNER_ASYNC_TOP[]
 import asyncio
 import itertools
+import time
 
 async def spin(msg: str) -> None:  # <1>
     for char in itertools.cycle(r'\|/-'):
