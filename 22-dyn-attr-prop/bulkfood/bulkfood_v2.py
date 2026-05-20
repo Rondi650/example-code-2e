@@ -61,3 +61,11 @@ class LineItem:
         else:
             raise ValueError('value must be > 0')  # <7>
 # end::LINEITEM_V2[]
+
+class Rondi:
+    nome = 'Rondi'
+    idade = 35
+    
+rondi = Rondi()
+
+getattr(rondi,'Rondi')

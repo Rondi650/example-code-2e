@@ -16,7 +16,7 @@ schedule_v1.py: traversing OSCON schedule data
 # tag::SCHEDULE1[]
 import json
 
-JSON_PATH = 'data/osconfeed.json'
+JSON_PATH = '/home/rondi/estudos/fluent_python/example-code-2e/22-dyn-attr-prop/oscon/data/osconfeed.json'
 
 class Record:
     def __init__(self, **kwargs):
@@ -36,3 +36,7 @@ def load(path=JSON_PATH):
             records[key] = Record(**raw_record)  # <8>
     return records
 # end::SCHEDULE1[]
+
+records = load(JSON_PATH)
+speaker = records['speaker.3471']
+print(speaker)
